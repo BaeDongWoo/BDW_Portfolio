@@ -1,8 +1,11 @@
+import { RefObject } from 'react';
 import styled from 'styled-components';
-
-const Project = () => {
+export type ProjectProps = {
+  element: RefObject<HTMLDivElement>;
+};
+const Project = ({ element }: ProjectProps) => {
   return (
-    <Container>
+    <Container ref={element}>
       <h1>Project</h1>
     </Container>
   );

@@ -1,8 +1,11 @@
+import { RefObject } from 'react';
 import styled from 'styled-components';
-
-const SkillPage = () => {
+export type SkillProps = {
+  element: RefObject<HTMLDivElement>;
+};
+const SkillPage = ({ element }: SkillProps) => {
   return (
-    <Container>
+    <Container ref={element}>
       <h1>SkillPage</h1>
     </Container>
   );

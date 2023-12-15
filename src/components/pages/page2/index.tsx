@@ -1,8 +1,11 @@
+import { RefObject } from 'react';
 import styled from 'styled-components';
-
-const AboutMe = () => {
+export type AboutMeProps = {
+  element: RefObject<HTMLDivElement>;
+};
+const AboutMe = ({ element }: AboutMeProps) => {
   return (
-    <Container>
+    <Container ref={element}>
       <h1>AboutMe</h1>;
     </Container>
   );
