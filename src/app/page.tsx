@@ -12,21 +12,24 @@ import { useState } from 'react';
 import useMoveScroll from '@/components/common/hooks/moveScroll';
 export default function Home() {
   const [mode, setMode] = useState<Boolean>(false);
-  const [element, onMoveToElement] = useMoveScroll();
-
+  const [mainScr, onMoveToMain] = useMoveScroll();
+  const [aboutMeScr, onMoveToAboutMe] = useMoveScroll();
+  const [skillScr, onMoveToSkill] = useMoveScroll();
+  const [projectScr, onMoveToProject] = useMoveScroll();
+  const scrolls = [onMoveToAboutMe, onMoveToSkill, onMoveToProject];
   return (
     <Container>
-      <Navbar />
-      <Logo />
+      <Navbar scrolls={scrolls} />
+      <Logo onClick={onMoveToMain} />
       {!mode ? (
         <Moon width={'4rem'} height={'4rem'} onClick={() => setMode(!mode)} />
       ) : (
         <Sun width={'4rem'} height={'4rem'} onClick={() => setMode(!mode)} />
       )}
-      <MainPage />
-      <AboutMe />
-      <SkillPage />
-      <Project />
+      <MainPage element={mainScr} />
+      <AboutMe element={aboutMeScr} />
+      <SkillPage element={skillScr} />
+      <Project element={projectScr} />
     </Container>
   );
 }
