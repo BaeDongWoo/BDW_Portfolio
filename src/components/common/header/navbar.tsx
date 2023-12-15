@@ -1,11 +1,13 @@
 import styled from 'styled-components';
-
-const Navbar = () => {
+export type NavbarProps = {
+  scrolls: (() => void)[];
+};
+const Navbar = ({ scrolls }: NavbarProps) => {
   return (
     <Container>
-      <Nav>어바웃미</Nav>
-      <Nav>스킬</Nav>
-      <Nav>프로젝트</Nav>
+      <Nav onClick={scrolls[0]}>어바웃미</Nav>
+      <Nav onClick={scrolls[1]}>스킬</Nav>
+      <Nav onClick={scrolls[2]}>프로젝트</Nav>
     </Container>
   );
 };

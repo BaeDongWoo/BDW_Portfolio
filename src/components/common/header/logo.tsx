@@ -1,6 +1,9 @@
 import styled from 'styled-components';
-const Logo = () => {
-  return <Container>BDW</Container>;
+export type onClickType = {
+  onClick: () => void;
+};
+const Logo = ({ onClick }: onClickType) => {
+  return <Container onClick={onClick}>BDW</Container>;
 };
 const Container = styled.div`
   position: fixed;
