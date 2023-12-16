@@ -16,6 +16,7 @@ const Container = styled.div`
   top: 0;
   right: 1.5rem;
   display: flex;
+  z-index: 2;
 `;
 const Nav = styled.div`
   font-weight: bold;

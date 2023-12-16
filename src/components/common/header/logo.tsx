@@ -13,6 +13,7 @@ const Container = styled.div`
   font-size: 2.5rem;
   width: 8rem;
   height: 4rem;
+  z-index: 2;
   &:hover {
     cursor: pointer;
   }
