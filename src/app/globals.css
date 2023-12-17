@@ -8,4 +8,5 @@ svg {
   right: 3rem;
   bottom: 2rem;
   cursor: pointer;
+  z-index: 2;
 }
