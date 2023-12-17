@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import Keyframes from 'styled-components/dist/models/Keyframes';
-
 const Wave = () => {
   return (
     <Ocean>
@@ -16,10 +14,10 @@ const Ocean = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #015871;
+  background: #ffffff;
 `;
 const Waves = styled.div`
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg)
+  background: url('wave.svg')
   repeat-x;
   position: absolute;
   top: -198px;
