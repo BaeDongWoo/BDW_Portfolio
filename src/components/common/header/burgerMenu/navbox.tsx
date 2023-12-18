@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import BugerIcon from './bugerIcon';
+import { NavbarProps } from '../navbar';
 
-const Navbox = () => {
+const Navbox = ({ scrolls }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const toggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,10 +13,9 @@ const Navbox = () => {
       <BugerIcon toggle={toggle} />
       {isMenuOpen && (
         <Container className={'mobile-only' + isMenuOpen ? 'active' : ''}>
-          <Items>홈</Items>
-          <Items>어바웃미</Items>
-          <Items>스킬</Items>
-          <Items>프로젝트</Items>
+          <Items onClick={scrolls[0]}>어바웃미</Items>
+          <Items onClick={scrolls[1]}>스킬</Items>
+          <Items onClick={scrolls[2]}>프로젝트</Items>
         </Container>
       )}
     </>
@@ -36,6 +36,7 @@ const Container = styled.div`
   transform: translateY(-20px);
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
   padding: 10px;
+  z-index: 3;
   &.active {
     opacity: 1;
     visibility: visible;

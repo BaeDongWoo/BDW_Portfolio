@@ -10,6 +10,7 @@ import Sun from '../app/assets/Sun.svg';
 import styled from 'styled-components';
 import { useState } from 'react';
 import useMoveScroll from '@/components/common/hooks/moveScroll';
+import Navbox from '@/components/common/header/burgerMenu/navbox';
 export default function Home() {
   const [mode, setMode] = useState<Boolean>(false);
   const [mainScr, onMoveToMain] = useMoveScroll();
@@ -20,12 +21,13 @@ export default function Home() {
   return (
     <Container>
       <Navbar scrolls={scrolls} />
+      <Navbox scrolls={scrolls} />
       <Logo onClick={onMoveToMain} />
-      {!mode ? (
+      {/* {!mode ? (
         <Moon width={'4rem'} height={'4rem'} onClick={() => setMode(!mode)} />
       ) : (
         <Sun width={'4rem'} height={'4rem'} onClick={() => setMode(!mode)} />
-      )}
+      )} */}
       <MainPage element={mainScr} />
       <AboutMe element={aboutMeScr} />
       <SkillPage element={skillScr} />
