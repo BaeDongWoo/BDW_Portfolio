@@ -1,7 +1,7 @@
 * {
   margin: 0;
   text-align: center;
-  line-height: 100vh;
+  /* line-height: 100vh; */
 }
 svg {
   position: fixed;
@@ -9,4 +9,23 @@ svg {
   bottom: 2rem;
   cursor: pointer;
   z-index: 2;
+}
+
+.pc-only > * {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+.mobile-only > * {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+.buger-Icon {
+  @media (max-width: 767px) {
+    width: 30px;
+    height: 20px;
+  }
 }
