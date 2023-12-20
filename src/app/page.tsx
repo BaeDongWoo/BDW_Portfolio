@@ -8,7 +8,7 @@ import Project from '@/components/pages/page4';
 import Moon from '../app/assets/Moon.svg';
 import Sun from '../app/assets/Sun.svg';
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useMoveScroll from '@/components/common/hooks/moveScroll';
 import Navbox from '@/components/common/header/burgerMenu/navbox';
 export default function Home() {
@@ -17,7 +17,35 @@ export default function Home() {
   const [aboutMeScr, onMoveToAboutMe] = useMoveScroll();
   const [skillScr, onMoveToSkill] = useMoveScroll();
   const [projectScr, onMoveToProject] = useMoveScroll();
-  const scrolls = [onMoveToAboutMe, onMoveToSkill, onMoveToProject];
+  const scrolls = [
+    onMoveToMain,
+    onMoveToAboutMe,
+    onMoveToSkill,
+    onMoveToProject,
+  ];
+  useEffect(() => {
+    let page = 0;
+    const lastPage = 3;
+    window.addEventListener(
+      'wheel',
+      (e) => {
+        e.preventDefault();
+        if (e.deltaY > 0) {
+          page++;
+        } else if (e.deltaY < 0) {
+          page--;
+        }
+        if (page < 0) {
+          page = 0;
+        } else if (page > lastPage) {
+          page = lastPage;
+        }
+        scrolls[page]();
+      },
+      { passive: false }
+    );
+  }, []);
+
   return (
     <Container>
       <Navbar scrolls={scrolls} />
@@ -37,6 +65,4 @@ export default function Home() {
 }
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
 `;
