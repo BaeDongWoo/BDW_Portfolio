@@ -1,5 +1,5 @@
 import { RefObject } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Wave from './wave';
 export type MainPageProps = {
   element: RefObject<HTMLDivElement>;
@@ -7,7 +7,24 @@ export type MainPageProps = {
 const MainPage = ({ element }: MainPageProps) => {
   return (
     <Container ref={element}>
-      <Title>BaeDongWoo Portfolio</Title>
+      <div className="title">
+        <div className="span1">
+          <span>b</span>
+          <span>d</span>
+          <span>w</span>
+        </div>
+        <div className="span2">
+          <span>p</span>
+          <span>o</span>
+          <span>r</span>
+          <span>t</span>
+          <span>f</span>
+          <span>o</span>
+          <span>l</span>
+          <span>i</span>
+          <span>o</span>
+        </div>
+      </div>
       <Scroll></Scroll>
       <Scroll></Scroll>
       <Scroll></Scroll>
@@ -23,12 +40,6 @@ const Container = styled.div`
   height: 100vh;
   position: relative;
 `;
-const Title = styled.div`
-  width: 100vw;
-  height: 5vh;
-  font-weight: bold;
-  font-size: 1.5rem;
-`;
 const Scroll = styled.span`
   position: absolute;
   font-weight: bold;
@@ -37,8 +48,8 @@ const Scroll = styled.span`
   width: 1.5rem;
   height: 1.5rem;
   margin-left: -12px;
-  border-left: 5px solid #fff;
-  border-bottom: 5px solid #fff;
+  border-left: 5px solid #000000;
+  border-bottom: 5px solid #000000;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb 2s infinite;
