@@ -13,9 +13,9 @@ const Navbox = ({ scrolls }: NavbarProps) => {
       <BugerIcon toggle={toggle} />
       {isMenuOpen && (
         <Container className={'mobile-only' + isMenuOpen ? 'active' : ''}>
-          <Items onClick={scrolls[0]}>어바웃미</Items>
-          <Items onClick={scrolls[1]}>스킬</Items>
-          <Items onClick={scrolls[2]}>프로젝트</Items>
+          <Items onClick={scrolls[1]}>어바웃미</Items>
+          <Items onClick={scrolls[2]}>스킬</Items>
+          <Items onClick={scrolls[3]}>프로젝트</Items>
         </Container>
       )}
     </>
