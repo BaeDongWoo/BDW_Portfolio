@@ -40,8 +40,9 @@ const Contact = styled.div`
     grid-template-rows: repeat(3, 100px);
   }
   @media (max-width: 466px) {
-    grid-template-columns: repeat(1, 200px);
-    grid-template-rows: repeat(6, 100px);
+    gap: 10px;
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: repeat(6, 50px);
   }
 `;
 export default Info;

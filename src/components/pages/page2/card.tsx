@@ -32,9 +32,18 @@ const Card = styled.div`
     width: 200px;
     height: 100px;
   }
+  @media (max-width: 466px) {
+    width: 300px;
+    height: 50px;
+    flex-direction: row;
+  }
   .card-label {
     font-size: 1rem;
     padding-top: 20px;
+    @media (max-width: 466px) {
+      width: 30%;
+      padding-top: 0;
+    }
   }
 `;
 
@@ -43,5 +52,9 @@ const CardFace = styled.div`
   height: 50%;
   font-size: 0.7rem;
   color: white;
+  @media (max-width: 466px) {
+    font-size: 0.8rem;
+    line-height: 50px;
+  }
 `;
 export default Cards;

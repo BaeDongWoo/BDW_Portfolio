@@ -38,8 +38,5 @@ const UserContainer = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media (max-width: 1023px) {
-    flex-direction: column;
-  }
 `;
 export default AboutMe;
