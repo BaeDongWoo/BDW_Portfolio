@@ -39,6 +39,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 `;
 const Scroll = styled.span`
   position: absolute;

@@ -21,10 +21,11 @@ const Waves = styled.div`
   repeat-x;
   position: absolute;
   top: -198px;
-  width: 6400px;
+  width: 400vw;
   height: 198px;
   animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
+  overflow-x: hidden;
   &:nth-of-type(2) {
     top: -175px;
     animation: wave 15s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 15s ease -1.25s infinite;
@@ -35,7 +36,7 @@ const Waves = styled.div`
       margin-left: 0;
     }
     100% {
-      margin-left: -1600px;
+      margin-left: -100vw;
     }
   }
   

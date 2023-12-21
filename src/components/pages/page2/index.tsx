@@ -1,14 +1,13 @@
-import { RefObject } from 'react';
+import { RefObject, useEffect } from 'react';
 import styled from 'styled-components';
 import ProfileImg from './profile';
 import Info from './infomation';
-
 export type AboutMeProps = {
   element: RefObject<HTMLDivElement>;
 };
 const AboutMe = ({ element }: AboutMeProps) => {
   return (
-    <Container ref={element}>
+    <Container ref={element} data-aos="flip-left">
       <UserContainer>
         <ProfileImg />
         <Info />
