@@ -7,6 +7,12 @@ import { SKILL_ICON_LIST } from '../../data/skillIconData';
 export type SkillProps = {
   element: RefObject<HTMLDivElement>;
 };
+export interface SkillBoxDataType {
+  name: string;
+  bgcol: string;
+  color: string;
+  content: string;
+}
 const SkillPage = ({ element }: SkillProps) => {
   const [selectIcon, setSelectIcon] = useState(SKILL_ICON_LIST[0]);
   return (
