@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SkillBoxDataType } from './skillBoxCon';
+import { SkillBoxDataType } from './index';
 interface SkillBoxProps {
   data: SkillBoxDataType;
 }

@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import { SKILL_ICON_LIST } from '../../data/skillIconData';
-interface SkillDataType {
-  name: string;
-  bgcol: string;
-  color: string;
+import { Dispatch, SetStateAction } from 'react';
+import { SkillBoxDataType } from './index';
+interface setSelectIcon {
+  setSelectIcon: Dispatch<SetStateAction<SkillBoxDataType>>;
 }
-const SkillIcons = () => {
-  const data: SkillDataType[] = SKILL_ICON_LIST;
+const SkillIcons = ({ setSelectIcon }: setSelectIcon) => {
+  const data: SkillBoxDataType[] = SKILL_ICON_LIST;
+  const IconHandler = (skill: SkillBoxDataType) => {
+    setSelectIcon(skill);
+  };
   return (
     <Container>
       {data.map((skill, index) => (
-        <Icon key={index} data={skill}>
+        <Icon key={index} data={skill} onClick={() => IconHandler(skill)}>
           {skill.name}
         </Icon>
       ))}
@@ -28,7 +31,7 @@ const Container = styled.div`
     justify-content: center;
   }
 `;
-const Icon = styled.div<{ data: SkillDataType }>`
+const Icon = styled.div<{ data: SkillBoxDataType }>`
   width: 100px;
   height: 40px;
   border-radius: 20px;
@@ -40,6 +43,9 @@ const Icon = styled.div<{ data: SkillDataType }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  &:hover {
+  }
   @media (max-width: 1023px) {
     width: 80px;
     height: 30px;
