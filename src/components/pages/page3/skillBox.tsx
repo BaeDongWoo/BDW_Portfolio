@@ -5,10 +5,10 @@ interface SkillBoxProps {
 }
 const SkillBox = ({ data }: SkillBoxProps) => {
   return (
-    <Container data-aos="flip-left" bgcol={data.bgcol} color={data.color}>
+    <Container bgcol={data.bgcol} color={data.color}>
       <div className="name">{data.name}</div>
       <div className="contents">
-        <div className="contents__content">{data.content}</div>
+        <span className="contents__content">{data.content}</span>
       </div>
     </Container>
   );
@@ -21,7 +21,10 @@ const Container = styled.div<{ bgcol: string; color: string }>`
   box-shadow: -5px 8px 0px 1px rgba(0, 0, 0, 0.5);
   position: relative;
   background-color: #fff;
+  justify-content: center;
   color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
   .name {
     transform: rotate(-10deg);
     position: absolute;
@@ -40,13 +43,13 @@ const Container = styled.div<{ bgcol: string; color: string }>`
     }
   }
   .contents {
-    margin-top: 1.5rem;
     line-height: 150%;
-
+    text-align: left;
     &__content {
       line-height: 2rem;
       position: relative;
       z-index: 3;
+      white-space: pre-line;
     }
   }
 `;
