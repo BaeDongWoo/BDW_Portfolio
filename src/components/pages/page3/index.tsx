@@ -1,17 +1,19 @@
-import { RefObject, useEffect } from 'react';
+import { RefObject, useState } from 'react';
 import styled from 'styled-components';
 import 'aos/dist/aos.css';
 import SkillIcons from './skillIcons';
 import SkillBoxCon from './skillBoxCon';
+import { SKILL_ICON_LIST } from '../../data/skillIconData';
 export type SkillProps = {
   element: RefObject<HTMLDivElement>;
 };
 const SkillPage = ({ element }: SkillProps) => {
+  const [selectIcon, setSelectIcon] = useState(SKILL_ICON_LIST[0]);
   return (
     <Container ref={element}>
       <SkillContainer>
-        <SkillIcons />
-        <SkillBoxCon />
+        <SkillIcons setSelectIcon={setSelectIcon} />
+        <SkillBoxCon selectIcon={selectIcon} />
       </SkillContainer>
     </Container>
   );
