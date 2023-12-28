@@ -5,21 +5,26 @@ type CardProps = {
   value: string;
 };
 const Cards = ({ label, value }: CardProps) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   const handleCardClick = () => {
-    setIsFlipped(!isFlipped);
+    if (label === '깃허브' || label === '블로그') {
+      window.open(value, '_blank');
+    }
   };
 
   return (
-    <Card onClick={handleCardClick} data-aos="fade-up" data-aos-duration="1000">
+    <Card
+      onClick={handleCardClick}
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      label={label}
+    >
       <CardFace className="card-label">{label}</CardFace>
       <CardFace className="card-value">{value}</CardFace>
     </Card>
   );
 };
 
-const Card = styled.div`
+const Card = styled.div<{ label: string }>`
   width: 200px;
   height: 100px;
   display: flex;
@@ -28,6 +33,8 @@ const Card = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   flex-direction: column;
+  cursor: ${(props) =>
+    props.label === '깃허브' || props.label === '블로그' ? 'pointer' : ''};
   @media (max-width: 1023px) {
     width: 200px;
     height: 100px;
