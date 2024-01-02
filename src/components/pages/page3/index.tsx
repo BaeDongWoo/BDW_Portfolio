@@ -18,7 +18,7 @@ const SkillPage = ({ element }: SkillProps) => {
   return (
     <Container ref={element}>
       <SkillContainer>
-        <SkillIcons setSelectIcon={setSelectIcon} />
+        <SkillIcons setSelectIcon={setSelectIcon} selectIcon={selectIcon} />
         <SkillBoxCon selectIcon={selectIcon} />
       </SkillContainer>
     </Container>
