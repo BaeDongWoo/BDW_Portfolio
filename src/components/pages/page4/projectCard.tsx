@@ -2,8 +2,21 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Front from './front';
 import Back from './back';
-
-const ProjectCard = () => {
+interface cardDataType {
+  data: {
+    front: {
+      img: string;
+      title: string;
+      discript: string;
+    };
+    back: {
+      mainFunc: string[];
+      url: { urlTitle: string; url: string }[];
+      stack: { name: string; bgcol: string; color: string }[];
+    };
+  };
+}
+const ProjectCard = ({ data }: cardDataType) => {
   const [isFlipped, setIsFlipped] = useState<string>('true');
 
   const handleFlip = () => {
