@@ -1,58 +1,32 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Front from './front';
+import Back from './back';
 
 const ProjectCard = () => {
+  const [isFlipped, setIsFlipped] = useState<string>('true');
+
+  const handleFlip = () => {
+    setIsFlipped(isFlipped === 'true' ? 'false' : 'true');
+  };
   return (
-    <CardContainer>
-      <ImgBox>
-        <img src="123.jpg"></img>
-      </ImgBox>
-      <ProjectTitle>
-        <h1>땡그랑</h1>
-      </ProjectTitle>
-      <ProjectMember>
-        <h3>1인</h3>
-      </ProjectMember>
-      <Discription>
-        <p>
-          시부엉 시부엉 시부엉 시부엉시부엉 시부엉 시부엉 시부엉시부엉 시부엉
-          시부엉 시부엉시부엉 시부엉 시부엉 시부엉시부엉 시부엉 시부엉
-          시부엉시부엉 시부엉 시부엉 시부엉시부엉 시부엉 시부엉 시부엉
-        </p>
-      </Discription>
-      <button>클릭</button>
+    <CardContainer onClick={handleFlip} flipped={isFlipped}>
+      <Front />
+      <Back />
     </CardContainer>
   );
 };
-const CardContainer = styled.div`
+const CardContainer = styled.div<{ flipped: string }>`
   width: 300px;
   height: 500px;
   border: 1px solid #eee;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const ImgBox = styled.div`
-  width: 100px;
-  height: 150px;
-  background-color: #fff;
-  img {
-    object-fit: contain;
-  }
-`;
-const ProjectTitle = styled.div`
-  width: 100px;
-  height: 50px;
-`;
-const ProjectMember = styled.div`
-  width: 100px;
-  height: 50px;
-`;
-const Discription = styled.div`
-  width: 80%;
-  padding: 10px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  transform: ${(props) =>
+    props.flipped === 'true' ? 'none' : 'rotateY(180deg)'};
 `;
 
 export default ProjectCard;
