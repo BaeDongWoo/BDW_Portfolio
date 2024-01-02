@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
+import { PROJECT_DATA } from '../../data/propjectData';
 import './styles.css';
 import ProjectCard from './projectCard';
 const Projects = () => {
@@ -13,6 +13,9 @@ const Projects = () => {
       grabCursor={true}
       centeredSlides={true}
       slidesPerView={'auto'}
+      initialSlide={1}
+      observer={true}
+      observeParents={true}
       coverflowEffect={{
         rotate: 50,
         stretch: 0,
@@ -20,19 +23,16 @@ const Projects = () => {
         modifier: 1,
         slideShadows: true,
       }}
-      pagination={true}
-      modules={[EffectCoverflow, Pagination]}
+      navigation
+      pagination={{ clickable: true }}
+      modules={[EffectCoverflow, Pagination, Navigation]}
       className="mySwiper"
     >
-      <SwiperSlide>
-        <ProjectCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProjectCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProjectCard />
-      </SwiperSlide>
+      {PROJECT_DATA.map((data, index) => (
+        <SwiperSlide key={index}>
+          <ProjectCard data={data} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
