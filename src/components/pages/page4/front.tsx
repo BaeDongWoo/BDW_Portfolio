@@ -1,25 +1,30 @@
 import styled from 'styled-components';
-
-const Front = () => {
+import { frontDataType } from './projectCard';
+import './styles.css';
+interface propsType {
+  frontData: frontDataType;
+  handleFlip: () => void;
+}
+const Front = ({ frontData, handleFlip }: propsType) => {
   return (
     <FrontContainer>
-      <ImgBox>
-        <img src="123.jpg"></img>
-      </ImgBox>
+      <ImgBox src={frontData.img}></ImgBox>
       <ProjectTitle>
-        <h1>땡그랑</h1>
+        <h2>{frontData.title}</h2>
       </ProjectTitle>
       <ProjectMember>
-        <h3>1인</h3>
+        <h4>{frontData.people}</h4>
       </ProjectMember>
       <Discription>
-        <p>
-          시부엉 시부엉 시부엉 시부엉시부엉 시부엉 시부엉 시부엉시부엉 시부엉
-          시부엉 시부엉시부엉 시부엉 시부엉 시부엉시부엉 시부엉 시부엉
-          시부엉시부엉 시부엉 시부엉 시부엉시부엉 시부엉 시부엉 시부엉
-        </p>
+        <p>{frontData.discript}</p>
       </Discription>
-      <button>클릭</button>
+      <div className="cta" onClick={handleFlip}>
+        <span>Click</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </div>
     </FrontContainer>
   );
 };
@@ -33,24 +38,39 @@ const FrontContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const ImgBox = styled.div`
-  width: 100px;
+const ImgBox = styled.img<{ src: string }>`
+  width: 150px;
   height: 150px;
+  border-radius: 50%;
   background-color: #fff;
-  img {
-    object-fit: contain;
+  object-fit: cover;
+  @media (max-width: 767px) {
+    width: 100px;
+    height: 100px;
   }
 `;
 const ProjectTitle = styled.div`
-  width: 100px;
-  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 15%;
 `;
 const ProjectMember = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100px;
-  height: 50px;
+  height: 15%;
 `;
 const Discription = styled.div`
   width: 80%;
+  height: 40%;
   padding: 10px;
+  white-space: pre-line;
+  @media (max-width: 767px) {
+    font-size: 0.8rem;
+  }
 `;
 export default Front;
