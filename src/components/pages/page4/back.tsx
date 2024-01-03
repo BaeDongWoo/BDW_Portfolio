@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { backDataType } from './projectCard';
 import SkillIconBox from './iconList';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 interface propsType {
   backData: backDataType;
   handleFlip: () => void;
@@ -11,46 +11,39 @@ const Back = ({ backData, handleFlip }: propsType) => {
   return (
     <BackContainer>
       <Swiper
-        pagination={{
-          type: 'fraction',
-        }}
-        navigation
-        modules={[Pagination, Navigation]}
+        pagination={{ clickable: true }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        speed={5000}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
         className="backSwiper"
       >
-        <SwiperSlide>
-          <img src="clink-002.png"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="clink-002.png"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="clink-002.png"></img>
-        </SwiperSlide>
+        {backData.imgList.map((src, index) => (
+          <SwiperSlide key={index}>
+            <img src={src}></img>
+          </SwiperSlide>
+        ))}
       </Swiper>
       <MainFunc>
-        <h3>주요기능</h3>
         <ul>
           {backData.mainFunc.map((func, index) => (
             <li key={index}>{func}</li>
           ))}
         </ul>
       </MainFunc>
-      <Location>
-        {backData.url.map((url, index) => (
-          <span key={index}>
-            {url.urlTitle} : {url.url}
-          </span>
-        ))}
-      </Location>
       <Skills>
         {backData.skills.map((skill, index) => (
           <SkillIconBox skill={skill} key={index} />
         ))}
       </Skills>
-
+      <Location>
+        {backData.url.map((url, index) => (
+          <a href={url.url} target="_blank" key={index}>
+            <img key={index} src={url.icon}></img>
+          </a>
+        ))}
+      </Location>
       <div className="cta-reverse" onClick={handleFlip}>
         <svg width="13px" height="10px" viewBox="0 0 13 10">
           <path d="M1,5 L11,5"></path>
@@ -71,18 +64,40 @@ const BackContainer = styled.div`
   align-items: center;
   justify-content: center;
   transform: rotateY(180deg);
+  @media (max-width: 767px) {
+    font-size: 0.8rem;
+  }
 `;
 const MainFunc = styled.div`
   width: 100%;
   height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  li {
+    list-style-type: decimal;
+    text-align: left;
+  }
 `;
 const Location = styled.div`
   font-size: 0.8rem;
   width: 100%;
-  height: 20%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  a img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 `;
 const Skills = styled.div`
   display: flex;
-  height: 15%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 20%;
 `;
 export default Back;
