@@ -11,13 +11,9 @@ const Front = ({ frontData, handleFlip }: propsType) => {
       <ImgBox src={frontData.img}></ImgBox>
       <ProjectTitle>
         <h2>{frontData.title}</h2>
-      </ProjectTitle>
-      <ProjectMember>
         <h4>{frontData.people}</h4>
-      </ProjectMember>
-      <Discription>
-        <p>{frontData.discript}</p>
-      </Discription>
+      </ProjectTitle>
+      <Discription>{frontData.discript}</Discription>
       <div className="cta" onClick={handleFlip}>
         <span>Click</span>
         <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -39,14 +35,15 @@ const FrontContainer = styled.div`
   justify-content: center;
 `;
 const ImgBox = styled.img<{ src: string }>`
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 350px;
+  height: 200px;
+  margin-top: 25px;
+  border-radius: 25px;
   background-color: #fff;
   object-fit: cover;
   @media (max-width: 767px) {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
   }
 `;
 const ProjectTitle = styled.div`
@@ -56,18 +53,11 @@ const ProjectTitle = styled.div`
   justify-content: center;
   height: 15%;
 `;
-const ProjectMember = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 15%;
-`;
 const Discription = styled.div`
   width: 80%;
   height: 40%;
   padding: 10px;
+  text-align: left;
   white-space: pre-line;
   @media (max-width: 767px) {
     font-size: 0.8rem;
