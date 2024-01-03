@@ -12,12 +12,7 @@ const Cards = ({ label, value }: CardProps) => {
   };
 
   return (
-    <Card
-      onClick={handleCardClick}
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      label={label}
-    >
+    <Card onClick={handleCardClick} label={label}>
       <CardFace className="card-label">{label}</CardFace>
       <CardFace className="card-value">{value}</CardFace>
     </Card>

@@ -25,6 +25,14 @@ const Container = styled.div<{ bgcol: string; color: string }>`
   color: #2e2e2e;
   display: flex;
   flex-direction: column;
+  @media (max-width: 767px) {
+    font-size: 0.7rem;
+    padding: 1.5rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 0.6rem;
+    padding: 1rem;
+  }
   .name {
     transform: rotate(-10deg);
     position: absolute;
@@ -50,6 +58,12 @@ const Container = styled.div<{ bgcol: string; color: string }>`
       position: relative;
       z-index: 3;
       white-space: pre-line;
+      @media (max-width: 767px) {
+        font-size: 0.6rem;
+      }
+      @media (max-width: 375px) {
+        font-size: 0.5rem;
+      }
     }
   }
 `;

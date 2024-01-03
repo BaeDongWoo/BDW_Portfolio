@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import Intro from './intro';
-import YourComponent from './card';
 import Cards from './card';
 const Info = () => {
   return (
@@ -29,7 +27,7 @@ const Contact = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 200px);
   grid-template-rows: repeat(3, 100px);
-  gap: 10px 30px;
+  gap: 40px 30px;
   @media (max-width: 1023px) {
     gap: 30px 10px;
     grid-template-columns: repeat(3, 200px);

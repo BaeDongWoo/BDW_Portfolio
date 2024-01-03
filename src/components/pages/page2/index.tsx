@@ -19,11 +19,13 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-item: center;
 `;
 const UserContainer = styled.div`
   display: flex;
   margin: auto;
-  margin-top: 50px;
   background-color: white;
   border-radius: 25px;
   box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.5);
