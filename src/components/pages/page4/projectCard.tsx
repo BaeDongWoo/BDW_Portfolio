@@ -9,8 +9,9 @@ export interface frontDataType {
   people: string;
 }
 export interface backDataType {
+  imgList: string[];
   mainFunc: string[];
-  url: { urlTitle: string; url: string }[];
+  url: { icon: string; url: string }[];
   skills: { name: string; bgcol: string; color: string }[];
 }
 interface cardDataType {
@@ -34,6 +35,7 @@ const ProjectCard = ({ data }: cardDataType) => {
 const CardContainer = styled.div<{ flipped: string }>`
   width: 450px;
   height: 700px;
+  background-color: #fff;
   border: 1px solid #eee;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
