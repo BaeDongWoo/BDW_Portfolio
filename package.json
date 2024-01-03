@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tomickigrzegorz/react-circular-progress-bar": "^1.1.2",
+    "@types/aos": "^3.0.7",
+    "@types/react-scroll": "^1.8.10",
+    "aos": "^3.0.0-beta.6",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-scroll": "^1.9.0",
+    "styled-components": "^6.1.6",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   }
 }
