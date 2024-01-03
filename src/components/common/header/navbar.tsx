@@ -5,9 +5,9 @@ export type NavbarProps = {
 const Navbar = ({ scrolls }: NavbarProps) => {
   return (
     <Container className="pc-only">
-      <Nav onClick={scrolls[1]}>어바웃미</Nav>
-      <Nav onClick={scrolls[2]}>스킬</Nav>
-      <Nav onClick={scrolls[3]}>프로젝트</Nav>
+      <Nav onClick={scrolls[1]}>About</Nav>
+      <Nav onClick={scrolls[2]}>Skill</Nav>
+      <Nav onClick={scrolls[3]}>Project</Nav>
     </Container>
   );
 };
