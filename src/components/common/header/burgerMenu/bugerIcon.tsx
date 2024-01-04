@@ -4,7 +4,7 @@ type bugerIconProps = {
 };
 const BugerIcon = ({ toggle }: bugerIconProps) => {
   return (
-    <BurgerMenuIcon onClick={toggle} className={'mobile-only buger-Icon'}>
+    <BurgerMenuIcon onClick={toggle} className="mobile-only buger-Icon">
       <div />
       <div />
       <div />
