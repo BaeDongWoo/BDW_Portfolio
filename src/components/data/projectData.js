@@ -34,7 +34,7 @@ export const PROJECT_DATA = [
   },
   {
     front: {
-      img: 'My-Todo_title.png',
+      img: 'My-Todo.png',
       title: 'My-ToDo',
       people: '1인 프로젝트',
       discript: `처음 리액트를 학습할 때 간단하게 했었던 투두리스트를 생각하며, 캘린더와 드래그 앤 드롭 등 직접 구현해 보고 싶었던 기능들과 함께 학습을 위해 개발한 일정관리 서비스 입니다. 
@@ -42,12 +42,7 @@ export const PROJECT_DATA = [
       작은 서비스이지만 처음부터 끝까지 혼자서 개발을 해본 것에 의미가 있었고, 그 과정에서 Redux Store, JWT 등을 학습한 것에도 의미가 있었습니다. 또한 gitpage를 통한 배포도 경험해 볼 수 있었습니다. `,
     },
     back: {
-      imgList: [
-        'My-Todo_title.png',
-        '회원가입.png',
-        '로그인.png',
-        '메인화면.png',
-      ],
+      imgList: ['My-Todo.png', '회원가입.png', '로그인.png', '메인화면.png'],
       mainFunc: [
         '캘린더를 통해 일정 등록',
         '등록한 일정 캘린더를 통해 미리보기',
