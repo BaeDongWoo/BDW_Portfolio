@@ -12,6 +12,8 @@ const BugerIcon = ({ toggle }: bugerIconProps) => {
   );
 };
 const BurgerMenuIcon = styled.div`
+  width: 30px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,6 +26,9 @@ const BurgerMenuIcon = styled.div`
     width: 30px;
     height: 4px;
     background-color: #000000;
+  }
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 export default BugerIcon;

@@ -19,36 +19,6 @@ html {
     display: none;
   }
 }
-.pc-only {
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  }
-}
-.mobile-only {
-  display: none;
-  @media (max-width: 767px) {
-    display: block;
-  }
-}
-.pc-only > * {
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  }
-}
-.mobile-only > * {
-  display: none;
-  @media (max-width: 767px) {
-    display: block;
-  }
-}
-.buger-Icon {
-  @media (max-width: 767px) {
-    width: 30px;
-    height: 20px;
-  }
-}
 .title {
   position: relative;
   display: flex;

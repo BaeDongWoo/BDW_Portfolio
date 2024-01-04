@@ -24,6 +24,9 @@ const Nav = styled.div`
   line-height: 3rem;
   width: 10rem;
   height: 3rem;
+  @media (max-width: 767px) {
+    display: none;
+  }
   &:hover {
     cursor: pointer;
   }

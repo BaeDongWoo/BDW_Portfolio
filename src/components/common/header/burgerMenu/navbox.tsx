@@ -42,6 +42,9 @@ const Container = styled.div`
     visibility: visible;
     transform: translateY(0);
   }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Items = styled.div`
