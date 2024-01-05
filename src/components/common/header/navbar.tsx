@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-export type NavbarProps = {
+import NavBackGround from './header';
+interface NavbarProps {
   scrolls: (() => void)[];
-};
+}
 const Navbar = ({ scrolls }: NavbarProps) => {
   return (
     <Container className="pc-only">
@@ -21,9 +22,10 @@ const Container = styled.div`
 const Nav = styled.div`
   font-weight: bold;
   text-align: center;
-  line-height: 3rem;
+  line-height: 4rem;
   width: 10rem;
   height: 3rem;
+  z-index: 2;
   @media (max-width: 767px) {
     display: none;
   }
