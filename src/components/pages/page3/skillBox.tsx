@@ -56,7 +56,7 @@ const Container = styled.div<{ bgcol: string; color: string }>`
     &__content {
       line-height: 2rem;
       position: relative;
-      z-index: 3;
+      z-index: 1;
       white-space: pre-line;
       @media (max-width: 767px) {
         font-size: 0.6rem;

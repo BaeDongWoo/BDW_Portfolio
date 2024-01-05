@@ -33,7 +33,7 @@ const ProjectCon = styled.div`
     left: 0;
     color: #fff;
     font-size: 3rem;
-    z-index: 999;
+    z-index: 2;
     text-shadow: -1px 1px 0 #ff6b00, -2px 2px 0 #ff6b00, -3px 4px 0 #ff6b00,
       -4px 5px 0 #ff6b00, -5px 7px 0 #ff6b00, -6px 8px 0 #ff6b00,
       -7px 10px 0 #ff6b00;
