@@ -1,6 +1,4 @@
 'use client';
-import Logo from '@/components/common/header/logo';
-import Navbar from '@/components/common/header/navbar';
 import MainPage from '@/components/pages/page1';
 import AboutMe from '@/components/pages/page2';
 import SkillPage from '@/components/pages/page3';
@@ -9,7 +7,7 @@ import AOS from 'aos';
 import styled from 'styled-components';
 import { useEffect } from 'react';
 import useMoveScroll from '@/components/common/hooks/moveScroll';
-import Navbox from '@/components/common/header/burgerMenu/navbox';
+import Header from '@/components/common/header/header';
 export default function Home() {
   const [mainScr, onMoveToMain] = useMoveScroll();
   const [aboutMeScr, onMoveToAboutMe] = useMoveScroll();
@@ -26,9 +24,7 @@ export default function Home() {
   });
   return (
     <Container>
-      <Navbar scrolls={scrolls} />
-      <Navbox scrolls={scrolls} />
-      <Logo onClick={onMoveToMain} />
+      <Header scrolls={scrolls} onClick={onMoveToMain} />
       <MainPage element={mainScr} />
       <AboutMe element={aboutMeScr} />
       <SkillPage element={skillScr} />
