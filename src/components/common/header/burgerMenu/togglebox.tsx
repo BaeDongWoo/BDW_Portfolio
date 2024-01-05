@@ -14,7 +14,7 @@ const ToggleBox = ({ scrolls, isMenuOpen }: NavbarProps) => {
 };
 const Container = styled.div`
   overflow: hidden;
-  background-color: #ccc;
+  background-color: #fff;
   position: fixed;
   top: 4rem;
   right: 0;
@@ -31,7 +31,7 @@ const Container = styled.div`
   }
 `;
 const Items = styled.div`
-  background-color: #ccc;
+  background-color: #fff;
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
