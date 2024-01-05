@@ -2,7 +2,12 @@
   font-family: 'SCD5';
   src: url(../../public/font/SCDream5.otf);
 }
-
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 * {
   margin: 0;
   text-align: center;
