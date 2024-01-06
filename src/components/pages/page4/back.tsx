@@ -14,9 +14,6 @@ const Back = ({ backData, handleFlip }: propsType) => {
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        speed={5000}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
-        loop={true}
         className="backSwiper"
       >
         {backData.imgList.map((src, index) => (
