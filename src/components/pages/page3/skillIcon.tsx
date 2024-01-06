@@ -22,6 +22,7 @@ const Icon = styled.div<{ data: SkillBoxDataType }>`
   width: 100px;
   height: 40px;
   border-radius: 20px;
+  margin: 5px;
   background-color: ${(props) => props.data.bgcol};
   color: ${(props) => props.data.color};
   font-weight: bold;

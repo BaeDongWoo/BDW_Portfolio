@@ -19,6 +19,7 @@ const SkillBoxs = styled.div`
   justify-content: space-around;
   grid-template-columns: repeat(1, 60vw);
   @media (max-width: 767px) {
+    margin-top: 40px;
     grid-template-columns: repeat(1, 80vw);
   }
 `;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { SKILL_ICON_LIST } from '../../data/skillIconData';
 import { Dispatch, SetStateAction } from 'react';
 import { SkillBoxDataType } from './index';
-import SkillIcon from './icon';
+import SkillIcon from './skillIcon';
 export interface SkillIconsProps {
   setSelectIcon: Dispatch<SetStateAction<SkillBoxDataType>>;
   selectIcon: SkillBoxDataType;
@@ -32,6 +32,7 @@ const Container = styled.div`
   @media (max-width: 1023px) {
     flex-wrap: wrap;
     justify-content: center;
+    font-size: 0.7rem;
   }
 `;
 export default SkillIcons;
