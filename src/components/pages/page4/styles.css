@@ -16,7 +16,6 @@
   }
 }
 .backSwiper {
-  display: flex;
   width: 100%;
 }
 .backSwiper .swiper-slide {
@@ -26,6 +25,7 @@
     height: 200px;
   }
 }
+
 .backSwiper .swiper-slide img {
   margin-top: 25px;
   width: 350px;
@@ -35,13 +35,36 @@
     height: 150px;
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 .cta {
   position: relative;
   margin: auto;
   padding: 19px 22px;
   transition: all 0.2s ease;
 }
-
+.mySwiper .swiper-pagination-bullet {
+  background: black;
+}
+.backSwiper .swiper-pagination-bullet {
+  @media (max-width: 767px) {
+    background: #fff;
+  }
+}
 .cta:before {
   content: '';
   position: absolute;
