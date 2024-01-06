@@ -6,7 +6,13 @@ import 'swiper/css/pagination';
 import { PROJECT_DATA } from '../../data/projectData';
 import './styles.css';
 import ProjectCard from './projectCard';
+import SwiperCore from 'swiper/core';
+import { useState } from 'react';
 const Projects = () => {
+  const [activeIndex, setActiveIndex] = useState<number>(1);
+  const handleSlideChange = (swiper: SwiperCore) => {
+    setActiveIndex(swiper.activeIndex);
+  };
   return (
     <Swiper
       effect={'coverflow'}
@@ -26,10 +32,11 @@ const Projects = () => {
       pagination={{ clickable: true }}
       modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
+      onSlideChange={handleSlideChange}
     >
       {PROJECT_DATA.map((data, index) => (
         <SwiperSlide key={index}>
-          <ProjectCard data={data} />
+          <ProjectCard data={data} activeIndex={activeIndex} index={index} />
         </SwiperSlide>
       ))}
     </Swiper>
