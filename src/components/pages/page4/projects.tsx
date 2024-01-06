@@ -8,11 +8,16 @@ import { PROJECT_DATA } from '../../data/projectData';
 import './styles.css';
 import ProjectCard from './projectCard';
 import SwiperCore from 'swiper/core';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
+  const [swiper, setSwiper] = useState<SwiperCore>();
   const handleSlideChange = (swiper: SwiperCore) => {
     setActiveIndex(swiper.activeIndex);
+  };
+  const handleSlideClick = (index: number) => {
+    if (swiper) swiper.slideTo(index);
   };
   return (
     <Swiper
@@ -35,9 +40,12 @@ const Projects = () => {
       modules={[EffectCoverflow, Pagination, Navigation]}
       className="mySwiper"
       onSlideChange={handleSlideChange}
+      onSwiper={(swiperInstance) => {
+        setSwiper(swiperInstance);
+      }}
     >
       {PROJECT_DATA.map((data, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} onClick={() => handleSlideClick(index)}>
           <ProjectCard data={data} activeIndex={activeIndex} index={index} />
         </SwiperSlide>
       ))}
