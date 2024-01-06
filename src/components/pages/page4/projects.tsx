@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { PROJECT_DATA } from '../../data/projectData';
 import './styles.css';
 import ProjectCard from './projectCard';
@@ -27,10 +28,11 @@ const Projects = () => {
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       }}
       pagination={{ clickable: true }}
-      modules={[EffectCoverflow, Pagination]}
+      navigation
+      modules={[EffectCoverflow, Pagination, Navigation]}
       className="mySwiper"
       onSlideChange={handleSlideChange}
     >
