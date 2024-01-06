@@ -30,7 +30,7 @@ const Header = ({ scrolls, onClick }: NavbarProps) => {
       <Logo onClick={onClick} />
       <Navbar scrolls={scrolls} />
       <BugerIcon toggle={toggle} />
-      <ToggleBox scrolls={scrolls} isMenuOpen={isMenuOpen} />
+      <ToggleBox scrolls={scrolls} isMenuOpen={isMenuOpen} toggle={toggle} />
     </Container>
   );
 };

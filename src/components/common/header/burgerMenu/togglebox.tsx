@@ -2,13 +2,18 @@ import styled from 'styled-components';
 export type NavbarProps = {
   scrolls: (() => void)[];
   isMenuOpen: boolean;
+  toggle: () => void;
 };
-const ToggleBox = ({ scrolls, isMenuOpen }: NavbarProps) => {
+const clickHandler = (scroll: () => void, toggle: () => void) => {
+  scroll();
+  toggle();
+};
+const ToggleBox = ({ scrolls, isMenuOpen, toggle }: NavbarProps) => {
   return (
     <Container className={isMenuOpen ? 'active' : ''}>
-      <Items onClick={scrolls[1]}>About</Items>
-      <Items onClick={scrolls[2]}>Skill</Items>
-      <Items onClick={scrolls[3]}>Project</Items>
+      <Items onClick={() => clickHandler(scrolls[1], toggle)}>About</Items>
+      <Items onClick={() => clickHandler(scrolls[2], toggle)}>Skill</Items>
+      <Items onClick={() => clickHandler(scrolls[3], toggle)}>Project</Items>
     </Container>
   );
 };
