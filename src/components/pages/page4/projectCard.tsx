@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Front from './front';
 import Back from './back';
@@ -19,12 +19,21 @@ interface cardDataType {
     front: frontDataType;
     back: backDataType;
   };
+  activeIndex: number;
+  index: number;
 }
-const ProjectCard = ({ data }: cardDataType) => {
+const ProjectCard = ({ data, activeIndex, index }: cardDataType) => {
   const [isFlipped, setIsFlipped] = useState<string>('true');
   const handleFlip = () => {
-    setIsFlipped(isFlipped === 'true' ? 'false' : 'true');
+    if (activeIndex === index) {
+      setIsFlipped(isFlipped === 'true' ? 'false' : 'true');
+    }
   };
+  useEffect(() => {
+    if (activeIndex !== index) {
+      setIsFlipped('true');
+    }
+  });
   return (
     <CardContainer flipped={isFlipped}>
       <Front frontData={data.front} handleFlip={handleFlip} />
