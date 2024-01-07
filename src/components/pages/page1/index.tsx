@@ -44,7 +44,7 @@ const Container = styled.div`
 const Scroll = styled.span`
   position: absolute;
   font-weight: bold;
-  top: 60vh;
+  top: 65vh;
   left: 50%;
   width: 1.5rem;
   height: 1.5rem;
@@ -62,12 +62,12 @@ const Scroll = styled.span`
     animation-delay: 0s;
   }
   &:nth-of-type(2) {
-    top: 61vh;
+    top: 66vh;
     -webkit-animation-delay: 0.15s;
     animation-delay: 0.15s;
   }
   &:nth-of-type(3) {
-    top: 62vh;
+    top: 67vh;
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
   }
