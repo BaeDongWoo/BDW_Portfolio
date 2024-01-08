@@ -8,23 +8,21 @@ const Timeline = () => {
   return (
     <Container>
       <h1>Histoy</h1>
-      <TimelineGrid>
-        {TIMELINE_DATA.map((data, idx) =>
-          idx % 2 === 0 ? (
-            <>
-              <TimelineTitle date={data.date} title={data.title} />
-              <MiddleLine />
-              <TimelineContent content={data.content} />
-            </>
-          ) : (
-            <>
-              <TimelineContent content={data.content} />
-              <MiddleLine />
-              <TimelineTitle date={data.date} title={data.title} />
-            </>
-          )
-        )}
-      </TimelineGrid>
+      {TIMELINE_DATA.map((data, idx) =>
+        idx % 2 === 0 ? (
+          <TimelineGrid key={idx}>
+            <TimelineTitle date={data.date} title={data.title} />
+            <MiddleLine />
+            <TimelineContent content={data.content} />
+          </TimelineGrid>
+        ) : (
+          <TimelineGrid key={idx}>
+            <TimelineContent content={data.content} />
+            <MiddleLine />
+            <TimelineTitle date={data.date} title={data.title} />
+          </TimelineGrid>
+        )
+      )}
     </Container>
   );
 };
@@ -40,7 +38,7 @@ const Container = styled.div`
     width: 100%;
   }
 `;
-const TimelineGrid = styled.div`
+const TimelineGrid = styled.section`
   display: grid;
   grid-template-columns: 1fr 3px 1fr;
 `;

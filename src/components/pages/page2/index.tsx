@@ -15,14 +15,16 @@ const AboutMe = ({ element }: AboutMeProps) => {
     </Container>
   );
 };
-const Container = styled.div`
+const Container = styled.article`
   width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-item: center;
   padding-bottom: 50px;
-  padding-top: 65px;
+  @media (max-width: 1023px) {
+    padding-top: 65px;
+  }
 `;
 const UserContainer = styled.div`
   display: flex;

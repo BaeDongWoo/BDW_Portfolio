@@ -7,14 +7,15 @@ const TimelineContent = ({ content }: contentPros) => {
 };
 const Container = styled.div`
   padding: 20px;
-  background: #2e2e2e;
+  background-color: #fff;
   font-size: 0.8rem;
   text-align: left;
   display: flex;
   flex-direction-column;
   align-items: center;
   box-shadow: 5px 5px 10px #242424;
-  color: #fff;
+  color: #2e2e2e;
+  font-weight:bold;
   transition: 0.4s ease;
   margin: 0.5rem;
   border-radius: 6px;

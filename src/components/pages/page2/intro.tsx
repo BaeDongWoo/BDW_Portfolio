@@ -6,18 +6,18 @@ const Intro = () => {
       <span>안녕하세요!</span>
       <br />
       <span>
-        <span className="underline">프론트엔드</span> 개발자를 희망하고
+        <strong className="underline">프론트엔드</strong> 개발자를 희망하고
         있습니다.
       </span>
       <br />
       <span>
-        새로 배우는 것을 좋아해 <span className="underline">항상 즐겁게</span>{' '}
-        배우고 있습니다.
+        새로 배우는 것을 좋아해{' '}
+        <strong className="underline">항상 즐겁게</strong> 배우고 있습니다.
       </span>
       <br />
       <span>
-        꾸준함을 무기로 <span className="underline">매일 성장하기 </span>위해
-        노력합니다.
+        꾸준함을 무기로 <strong className="underline">매일 성장하기 </strong>
+        위해 노력합니다.
       </span>
     </Introduction>
   );

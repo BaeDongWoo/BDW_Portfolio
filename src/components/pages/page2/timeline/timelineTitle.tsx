@@ -16,6 +16,7 @@ const TimelineTitle = ({ date, title }: titlePros) => {
 const Container = styled.div`
   margin: 0px 20px 20px 20px;
   font-size: 1rem;
+  font-weight: bold;
   @media (max-width: 375px) {
     font-size: 0.6rem;
   }
