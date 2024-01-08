@@ -23,7 +23,7 @@ export default function RootLayout({
         property="og:description"
         content="프론트엔드 개발자를 꿈꾸는 배동우의 포트폴리오 입니다."
       />
-      <meta property="og:image" content="bdw_01.png" />
+      <meta property="og:image" content="BDW_01.png" />
       <body>{children}</body>
     </html>
   );
