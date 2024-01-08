@@ -11,9 +11,10 @@ const SkillIconBox = ({ skill }: SkillDataType) => {
   return <Icon data={skill}>{skill.name}</Icon>;
 };
 const Icon = styled.div<{ data: SkillType }>`
-  width: 80px;
-  height: 30px;
-  margin: 10px;
+  min-width: 80px;
+  min-height: 30px;
+  padding: 0 10px;
+  margin: 5px;
   border-radius: 15px;
   background-color: ${(props) => props.data.bgcol};
   color: ${(props) => props.data.color};
@@ -23,8 +24,8 @@ const Icon = styled.div<{ data: SkillType }>`
   align-items: center;
   justify-content: center;
   @media (max-width: 767px) {
-    width: 50px;
-    height: 20px;
+    min-width: 50px;
+    min-height: 20px;
     border-radius: 10px;
     font-size: 0.5rem;
   }

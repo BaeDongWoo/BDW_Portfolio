@@ -18,6 +18,7 @@ export const PROJECT_DATA = [
       mainFunc: [
         '나만의 포트폴리오 사이트를 제작해보기 위함',
         '미디어 쿼리를 활용한 반응형 웹페이지',
+        'Vercel을 통한 정적 페이지 배포',
       ],
       url: [
         {
@@ -30,6 +31,10 @@ export const PROJECT_DATA = [
         { name: 'REACT', bgcol: '#61DAFB', color: '#fff' },
         { name: 'TS', bgcol: '#3178C6', color: '#fff' },
         { name: 'NEXT.JS', bgcol: '#000000', color: '#fff' },
+        { name: 'CSS', bgcol: '#1572B6', color: '#fff' },
+        { name: 'STYELD_COMPONENTS', bgcol: '#DB7093', color: '#fff' },
+        { name: 'SWIPER', bgcol: '#6332F6', color: '#fff' },
+        { name: 'VERCEL', bgcol: '#000000', color: '#fff' },
       ],
     },
   },
@@ -95,9 +100,12 @@ export const PROJECT_DATA = [
         { name: 'REACT', bgcol: '#61DAFB', color: '#fff' },
         { name: 'JS', bgcol: '#F7DF1E', color: '#fff' },
         { name: 'SASS', bgcol: '#CC6699', color: '#fff' },
+        { name: 'BOOTSTRAP', bgcol: '#7952B3', color: '#fff' },
         { name: 'AXIOS', bgcol: '#5A29E4', color: '#fff' },
         { name: 'SpringBoot', bgcol: '#6DB33F', color: '#fff' },
         { name: 'MYSQL', bgcol: '#4479A1', color: '#fff' },
+        { name: 'DOCKER', bgcol: '#2496ED', color: '#fff' },
+        { name: 'JENKINS', bgcol: '#D24939', color: '#fff' },
       ],
     },
   },
