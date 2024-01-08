@@ -28,6 +28,10 @@ const IconBox = styled.div`
   a img {
     width: 70px;
     height: 70px;
+    @media (max-width: 767px) {
+      width: 50px;
+      height: 50px;
+    }
   }
 `;
 export default LinkIcon;

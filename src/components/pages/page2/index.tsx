@@ -1,7 +1,7 @@
 import { RefObject, useEffect } from 'react';
 import styled from 'styled-components';
 import Profile from './profile';
-import TimelineEx from './timeLine';
+import TimelineEx from './timeline/timeLine';
 export type AboutMeProps = {
   element: RefObject<HTMLDivElement>;
 };
@@ -33,6 +33,7 @@ const UserContainer = styled.div`
   box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.5);
   width: 90vw;
   max-width: 1570px;
+  min-width: 320px;
   flex-wrap: wrap;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
