@@ -12,7 +12,7 @@ const Navbar = ({ scrolls }: NavbarProps) => {
     </Container>
   );
 };
-const Container = styled.div`
+const Container = styled.nav`
   position: fixed;
   top: 0;
   right: 1.5rem;
@@ -31,6 +31,7 @@ const Nav = styled.div`
   }
   &:hover {
     cursor: pointer;
+    color: #ff6b00;
   }
 `;
 export default Navbar;

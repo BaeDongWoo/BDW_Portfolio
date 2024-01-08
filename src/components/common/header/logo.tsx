@@ -16,6 +16,7 @@ const Container = styled.div`
   z-index: 2;
   &:hover {
     cursor: pointer;
+    color: #ff6b00;
   }
 `;
 export default Logo;

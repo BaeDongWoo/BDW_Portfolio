@@ -17,7 +17,7 @@ const ToggleBox = ({ scrolls, isMenuOpen, toggle }: NavbarProps) => {
     </Container>
   );
 };
-const Container = styled.div`
+const Container = styled.nav`
   overflow: hidden;
   background-color: #fff;
   position: fixed;

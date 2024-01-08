@@ -35,13 +35,14 @@ const Header = ({ scrolls, onClick }: NavbarProps) => {
   );
 };
 
-const Container = styled.div<{ scroll: number }>`
+const Container = styled.header<{ scroll: number }>`
   width: 100%;
   height: 4rem;
   position: fixed;
   left: 0;
   top: 0;
-  background-color: ${(props) => (props.scroll === 0 ? '' : '#fff')};
+  background-color: ${(props) =>
+    props.scroll === 0 ? '' : 'rgba(255,255,255,0.8)'};
   box-shadow: ${(props) =>
     props.scroll === 0 ? '' : '0 1px 0.3rem hsla(0, 0%, 80%, 0.8)'};
   z-index: 3;
