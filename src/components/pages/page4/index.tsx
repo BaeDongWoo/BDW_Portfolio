@@ -16,15 +16,14 @@ const Project = ({ element }: ProjectProps) => {
 };
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 65px;
 `;
 const ProjectCon = styled.div`
   position: relative;
   margin: auto;
-  margin-top: 50px;
   width: 90vw;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   .title {

@@ -1,7 +1,7 @@
 import { RefObject, useEffect } from 'react';
 import styled from 'styled-components';
-import ProfileImg from './profile';
-import Info from './infomation';
+import Profile from './profile';
+import TimelineEx from './timeLine';
 export type AboutMeProps = {
   element: RefObject<HTMLDivElement>;
 };
@@ -9,32 +9,31 @@ const AboutMe = ({ element }: AboutMeProps) => {
   return (
     <Container ref={element} data-aos="flip-left">
       <UserContainer>
-        <ProfileImg />
-        <Info />
+        <Profile />
+        <TimelineEx />
       </UserContainer>
     </Container>
   );
 };
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-item: center;
+  padding-bottom: 50px;
+  padding-top: 65px;
 `;
 const UserContainer = styled.div`
   display: flex;
   margin: auto;
-  background-color: white;
+  padding-bottom: 50px;
+  background-color: #fff;
   border-radius: 25px;
   box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.5);
   width: 90vw;
-  height: 90vh;
   max-width: 1570px;
-  max-height: 720px;
   flex-wrap: wrap;
-  overflow: scroll;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;

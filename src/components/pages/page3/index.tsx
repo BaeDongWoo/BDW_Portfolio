@@ -26,16 +26,19 @@ const SkillPage = ({ element }: SkillProps) => {
 };
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
-  overflow: scroll;
-  overflow-x: hidden;
+  min-height: 100vh;
   background-color: #2e2e2e;
 `;
 const SkillContainer = styled.div`
   width: 90vw;
   height: 90vh;
   margin: auto;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  @media (max-width: 1023px) {
+    padding-top: 65px;
+  }
 `;
 
 export default SkillPage;

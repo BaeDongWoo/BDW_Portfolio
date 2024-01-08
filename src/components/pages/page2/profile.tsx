@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Intro from './intro';
-const ProfileImg = () => {
+import LinkIcon from './linkIcon';
+const Profile = () => {
   return (
     <Container>
       <Background />
@@ -9,6 +10,7 @@ const ProfileImg = () => {
         <Ko>배동우</Ko>
       </Name>
       <Intro />
+      <LinkIcon />
     </Container>
   );
 };
@@ -49,10 +51,6 @@ const ImgContainer = styled.img<{ src: string }>`
     height: 200px;
     margin-top: 0;
   }
-  @media (max-width: 767px) {
-    width: 200px;
-    height: 200px;
-  }
 `;
 const Name = styled.div`
   display: flex;
@@ -68,13 +66,4 @@ const Ko = styled.span`
     font-size: 1.5rem;
   }
 `;
-const En = styled.span`
-  font-size: 1.5rem;
-  @media (max-width: 1023px) {
-    font-size: 1rem;
-  }
-  @media (max-width: 767px) {
-    font-size: 0.8rem;
-  }
-`;
-export default ProfileImg;
+export default Profile;

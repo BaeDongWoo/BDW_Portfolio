@@ -53,7 +53,7 @@ const CardFace = styled.div`
   width: 100%;
   height: 50%;
   font-size: 0.7rem;
-  color: white;
+  color: #fff;
   @media (max-width: 466px) {
     font-size: 0.8rem;
     line-height: 50px;
