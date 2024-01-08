@@ -34,7 +34,7 @@ const MainPage = ({ element }: MainPageProps) => {
 };
 export default MainPage;
 
-const Container = styled.div`
+const Container = styled.article`
   background: linear-gradient(deepSkyBlue, skyBlue, lightCyan);
   width: 100vw;
   height: 100vh;

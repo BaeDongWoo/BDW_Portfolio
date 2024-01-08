@@ -14,7 +14,7 @@ const Project = ({ element }: ProjectProps) => {
     </Container>
   );
 };
-const Container = styled.div`
+const Container = styled.article`
   width: 100vw;
   min-height: 100vh;
   padding-top: 65px;

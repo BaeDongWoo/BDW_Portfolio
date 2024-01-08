@@ -17,10 +17,8 @@ const SkillBoxs = styled.div`
   height: 60%;
   display: grid;
   justify-content: space-around;
-  grid-template-columns: repeat(1, 60vw);
   @media (max-width: 767px) {
     margin-top: 40px;
-    grid-template-columns: repeat(1, 80vw);
   }
 `;
 export default SkillBoxCon;

@@ -24,10 +24,11 @@ const SkillPage = ({ element }: SkillProps) => {
     </Container>
   );
 };
-const Container = styled.div`
+const Container = styled.article`
   width: 100vw;
   min-height: 100vh;
   background-color: #2e2e2e;
+  padding-bottom: 50px;
 `;
 const SkillContainer = styled.div`
   width: 90vw;

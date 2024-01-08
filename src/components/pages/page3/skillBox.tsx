@@ -59,10 +59,10 @@ const Container = styled.div<{ bgcol: string; color: string }>`
       z-index: 1;
       white-space: pre-line;
       @media (max-width: 767px) {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
       }
       @media (max-width: 375px) {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
       }
     }
   }
