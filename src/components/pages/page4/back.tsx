@@ -46,7 +46,7 @@ const Back = ({ backData, handleFlip }: propsType) => {
           <path d="M1,5 L11,5"></path>
           <polyline points="4 1 0 5 4 9"></polyline>
         </svg>
-        <span>Click</span>
+        <span>앞장 보기</span>
       </div>
     </BackContainer>
   );

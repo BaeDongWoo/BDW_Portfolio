@@ -15,7 +15,7 @@ const Front = ({ frontData, handleFlip }: propsType) => {
       </ProjectTitle>
       <Discription>{frontData.discript}</Discription>
       <div className="cta" onClick={handleFlip}>
-        <span>Click</span>
+        <span>뒷장 보기</span>
         <svg width="13px" height="10px" viewBox="0 0 13 10">
           <path d="M1,5 L11,5"></path>
           <polyline points="8 1 12 5 8 9"></polyline>
