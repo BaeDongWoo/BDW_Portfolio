@@ -10,7 +10,14 @@ export const metadata: Metadata = {
     icon: '/favi.ico',
   },
   openGraph: {
-    images: 'BDW_01.png',
+    images: [
+      {
+        url: 'https://bdw-portfolio.vercel.app/BDW_01.png',
+        alt: '배동우의 포트폴리오 이미지',
+      },
+    ],
+    description: '배동우의 포트폴리오 입니다.',
+    title: '배동우 | 포트폴리오',
   },
 };
 
@@ -25,12 +32,6 @@ export default function RootLayout({
         <meta
           name="google-site-verification"
           content="A7biAGh2S8sojeZl2baYrK_3ZvhvRgp8CNRLk1uzdiE"
-        />
-        <meta property="og:title" content="배동우 | 포트폴리오" />
-        <meta property="og:description" content="배동우의 포트폴리오 입니다." />
-        <meta
-          property="og:image"
-          content="https://bdw-portfolio.vercel.app/BDW_01.png"
         />
       </Head>
       <body>{children}</body>
