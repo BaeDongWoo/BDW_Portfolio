@@ -1,5 +1,6 @@
 # 포트폴리오
-![BDW_01](https://github.com/BaeDongWoo/BDW_Portfolio/assets/114900672/30faf6bf-26e8-4518-b952-b11e72197111)
+![BDW-007](https://github.com/BaeDongWoo/BDW_Portfolio/assets/114900672/bf0fe55f-1ef5-4387-a468-e257a226f43d)
+
 
 ### 소개
 
