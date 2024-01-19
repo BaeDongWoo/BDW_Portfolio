@@ -17,11 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="A7biAGh2S8sojeZl2baYrK_3ZvhvRgp8CNRLk1uzdiE"
+        />
+      </head>
       <meta property="og:title" content="배동우 | 포트폴리오" />
-      <meta
-        property="og:description"
-        content="프론트엔드 개발자를 꿈꾸는 배동우의 포트폴리오 입니다."
-      />
+      <meta property="og:description" content="배동우의 포트폴리오 입니다." />
+      <meta property="og:image" content="../../public/123.jpg" />
       <body>{children}</body>
     </html>
   );
