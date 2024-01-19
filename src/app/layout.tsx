@@ -22,17 +22,13 @@ export default function RootLayout({
           name="google-site-verification"
           content="A7biAGh2S8sojeZl2baYrK_3ZvhvRgp8CNRLk1uzdiE"
         />
+        <meta property="og:title" content="배동우 | 포트폴리오" />
+        <meta property="og:description" content="배동우의 포트폴리오 입니다." />
+        <meta
+          property="og:image"
+          content="https://bdw-portfolio.vercel.app/BDW_01.png"
+        />
       </head>
-      <meta property="og:title" content="배동우 | 포트폴리오"></meta>
-      <meta
-        property="og:description"
-        content="배동우의 포트폴리오 입니다."
-      ></meta>
-      <meta
-        property="og:image"
-        content="https://bdw-portfolio.vercel.app/BDW_01.png"
-      ></meta>
-      <meta property="og:image:alt" content="배동우의 포트폴리오 이미지"></meta>
       <body>{children}</body>
     </html>
   );
