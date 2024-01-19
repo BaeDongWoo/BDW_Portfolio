@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <meta property="og:title" content="배동우 | 포트폴리오" />
       <meta property="og:description" content="배동우의 포트폴리오 입니다." />
-      <meta property="og:image" content="./BDW_01.png" />
+      <meta property="og:image" content="BDW_01.png" />
       <body>{children}</body>
     </html>
   );
