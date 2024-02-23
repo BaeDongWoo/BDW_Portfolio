@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Head from 'next/head';
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bdw-portfolio.vercel.app'),
   title: '배동우 | 포트폴리오',
   description: '프론트엔드 개발자를 꿈꾸는 배동우의 포트폴리오입니다.',
   keywords:
