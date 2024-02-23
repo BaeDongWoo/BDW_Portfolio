@@ -85,4 +85,13 @@ export const SKILL_ICON_LIST = [
     또한, ERD_Cloud를 통해 직접 다이어그램을 작성하고 데이터 베이스를 설계했던 경험이 있습니다.
     `,
   },
+  {
+    name: 'Firebase',
+    bgcol: '#FFCA28',
+    color: '#fff',
+    content: `Firebase 인증 서비스를 활용할 수 있습니다. 기본적인 이메일 인증부터 소셜 인증 기능까지 활용 할 수 있고,
+    Firebase에서 제공하지 않는 네이버, 카카오 등과 같은 인증 서비스와 함께 연동하여 사용 가능합니다.
+    또한, 기본적이 NoSQL 데이터베이스의 구조를 이해하고 있으며, Firebase Store의 컬렉션 구조에 따라 기본적인 데이터 추가 및 삭제, 수정이 가능합니다.
+    `,
+  },
 ];

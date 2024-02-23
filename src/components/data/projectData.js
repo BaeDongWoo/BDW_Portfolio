@@ -43,20 +43,21 @@ export const PROJECT_DATA = [
       img: '시작.png',
       title: 'My-ToDo',
       people: '1인 프로젝트',
-      discript: `처음 리액트를 학습할 때 간단하게 했었던 투두리스트를 생각하며, 캘린더와 드래그 앤 드롭 등 직접 구현해 보고 싶었던 기능들과 함께 학습을 위해 개발한 일정관리 서비스 입니다. 
+      discript: `처음 리액트를 학습할 때 간단하게 만들었던 투두리스트를 생각하며, 캘린더와 드래그 앤 드롭 등 직접 구현해 보고 싶었던 기능들과 함께 학습을 위해 개발한 일정관리 서비스 입니다. 
       
-      작은 서비스이지만 처음부터 끝까지 혼자서 개발을 해본 것에 의미가 있었고, 그 과정에서 Redux Store, JWT 등을 학습한 것에도 의미가 있었습니다. 또한 gitpage를 통한 배포도 경험해 볼 수 있었습니다. `,
+      작은 서비스이지만 처음부터 끝까지 혼자서 개발을 해본 것에 의미가 있었고, 그 과정에서 Redux Store, JWT 등을 학습한 것에도 의미가 있었습니다. 또한, 배포한 이후에도 새로 학습한 Firebase를 적용하는 등 조금씩 업데이트 해온 서비스 입니다.
+      `,
     },
     back: {
-      imgList: ['시작.png', '회원가입.png', '로그인.png', '메인화면.png'],
+      imgList: ['시작.png', '회원.png', '로그인.png', '메인화면.png'],
       mainFunc: [
-        '캘린더를 통해 일정 등록',
-        '등록한 일정 캘린더를 통해 미리보기',
-        '등록한 일정 수정',
+        'SNS를 통한 간편 로그인',
+        '캘린더를 통해 일정 미리보기 기능',
+        '선택한 날짜의 일정 등록 및 수정 기능',
       ],
       url: [
         { icon: 'github.png', url: 'https://github.com/BaeDongWoo/ToDo-List' },
-        { icon: 'url.png', url: 'https://baedongwoo.github.io/ToDo-List/' },
+        { icon: 'url.png', url: 'https://bdw-my-todo.vercel.app/' },
       ],
       skills: [
         { name: 'REACT', bgcol: '#61DAFB', color: '#fff' },
@@ -64,9 +65,9 @@ export const PROJECT_DATA = [
         { name: 'CSS', bgcol: '#1572B6', color: '#fff' },
         { name: 'AXIOS', bgcol: '#5A29E4', color: '#fff' },
         { name: 'REDUX', bgcol: '#764ABC', color: '#fff' },
-        { name: 'NODE.JS', bgcol: '#339933', color: '#fff' },
-        { name: 'EXPRESS', bgcol: '#000000', color: '#fff' },
         { name: 'MYSQL', bgcol: '#4479A1', color: '#fff' },
+        { name: 'Firebase', bgcol: '#FFCA28', color: '#fff' },
+        { name: 'VERCEL', bgcol: '#000000', color: '#fff' },
       ],
     },
   },
@@ -75,9 +76,9 @@ export const PROJECT_DATA = [
       img: '땡그랑_title-002 (2).png',
       title: '땡그랑',
       people: '4인 프로젝트',
-      discript: `신한 DS 교육 과정 중 진행한 팀 프로젝트로 코로나 시대를 거치면서 MZ세대 사이에서는 무지출 챌린지, 거지방 등의 짠테크가 유행함에 따라 이를 쉽게 제공하기 위한 챌린지형 저축 서비스 입니다. 
+      discript: `코로나 시대를 거치면서 MZ세대 사이에서는 무지출 챌린지, 거지방 등의 짠테크가 유행함에 따라 이를 쉽게 제공하기 위한 챌린지형 저축 서비스 입니다. 
         
-      기획부터 배포까지 진행하며 서비스를 개발하는 과정을 경험해 볼 수 있었고, 팀원들과 협업하는 과정에서 다양한 협업 툴과 컨벤션, 명세 등의 중요성도 느낄 수 있었습니다.
+      커뮤니티 부분을 담당했으며 게시물과 댓글의 CRUD 기능, 해시태그 기능, 필터링 기능, 뉴스 정보 크롤링, ChatGPT API 활용 등을 구현했습니다. 기획부터 배포까지 전반적인 웹 서비스를 개발하는 과정을 경험해 볼 수 있었고, 다양한 협업 툴과 컨벤션, 명세 등의 중요성도 느낄 수 있었습니다.
         `,
     },
     back: {
