@@ -25,7 +25,7 @@ const Projects = () => {
       grabCursor={true}
       centeredSlides={true}
       slidesPerView={'auto'}
-      initialSlide={1}
+      initialSlide={2}
       observer={true}
       observeParents={true}
       coverflowEffect={{

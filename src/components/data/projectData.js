@@ -1,6 +1,31 @@
 export const PROJECT_DATA = [
   {
     front: {
+      img: 'waiting-010.png',
+      title: '오목 웹',
+      people: '1인 프로젝트',
+      discript: `개발 진행 중 입니다.`,
+    },
+    back: {
+      imgList: ['waiting-010.png'],
+      mainFunc: ['', '', ''],
+      url: [
+        {
+          icon: 'github.png',
+          url: 'https://github.com/BaeDongWoo/omok-web',
+        },
+      ],
+      skills: [
+        { name: 'REACT', bgcol: '#61DAFB', color: '#fff' },
+        { name: 'TS', bgcol: '#3178C6', color: '#fff' },
+        { name: 'SCSS', bgcol: '#1572B6', color: '#fff' },
+        { name: 'STYELD_COMPONENTS', bgcol: '#DB7093', color: '#fff' },
+        { name: 'Firebase', bgcol: '#FFCA28', color: '#fff' },
+      ],
+    },
+  },
+  {
+    front: {
       img: 'BDW_01.png',
       title: '포트폴리오',
       people: '1인 프로젝트',
