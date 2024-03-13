@@ -1,18 +1,35 @@
 export const PROJECT_DATA = [
   {
     front: {
-      img: 'waiting-010.png',
+      img: '오목-011.png',
       title: '오목 웹',
       people: '1인 프로젝트',
-      discript: `개발 진행 중 입니다.`,
+      discript: ` 채팅 기능처럼 양방향으로 통신하는 서비스를 경험해 보기 위해 만들어본 웹 사이트입니다. 업데이트되는 데이터를 해당 서비스의 사용자들에게 실시간으로 제공하기 위해 Firebase의 Snapshot을 사용해 개발했습니다. 
+      
+      간단하게 기획한 프로젝트이지만 서버에서 공통으로 관리해야 하는 데이터와 그에 따라 서로 다르게 처리하는 경험을 할 수 있었던 프로젝트입니다. 또한, 오목 게임에 사용될 보드와 돌을 그리기 위한 Canvas API도 함께 경험해 볼 수 있었습니다. `,
     },
     back: {
-      imgList: ['waiting-010.png'],
-      mainFunc: ['', '', ''],
+      imgList: [
+        'omok_start.png',
+        'omok_waiting.png',
+        'omok_makeRoom.png',
+        'omok_enter.png',
+        'omok_main.png',
+        'omok_game.png',
+      ],
+      mainFunc: [
+        '닉네임을 사용한 익명 로그인',
+        '방 만들기 기능(비밀번호 설정o)',
+        '다른 사용자와 즐기는 오목게임',
+      ],
       url: [
         {
           icon: 'github.png',
           url: 'https://github.com/BaeDongWoo/omok-web',
+        },
+        {
+          icon: 'url.png',
+          url: 'https://bdw-omok.vercel.app',
         },
       ],
       skills: [
